@@ -8,7 +8,11 @@ public class Client {
         ProduitA produitA = null;
         
         System.out.println("\n");
-        produitA = produitFactory.getProduitA(ProduitFactory.TYPE_PRODUIT);
+        produitA = produitFactory.getProduitA(ProduitFactory.TYPE_PRODUIT1);
+        produitA.methodeA();
+        System.out.println("\n");
+
+        produitA = produitFactory.getProduitA(ProduitFactory.TYPE_PRODUIT2);
         produitA.methodeA();
         System.out.println("\n");
      }
