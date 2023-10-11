@@ -7,7 +7,9 @@ public class Client {
         ProduitFactory produitFactory = new ProduitFactory();
         ProduitA produitA = null;
         
+        System.out.println("\n");
         produitA = produitFactory.getProduitA(ProduitFactory.TYPE_PRODUIT);
         produitA.methodeA();
+        System.out.println("\n");
      }
 }
