@@ -52,6 +52,41 @@ La communication entre 2 classes se fait par instantiation de la classe appelée
       ->2 fabriques concretes:Qui vont hériter de la fabrique abstraite
       ->2 produits abstraits:Qui seront les types d'objets finaux
       ->4 produits concrets:qui héritent des produits abstraits
-  Il faut noter que
+
+    3)Principe
+L'idée de la fabrique abstraite est de séparer la fabrication des objets en familles.C'est a dire que nous avons une fabrique concrète qui est spécialisée uniquement dans la fabrication d'une et une seule famille d'objets.
+
+    4) Implémentation 
+    
+les fabriques concrètes héritent de l'unique fabrique abstraite.Ces fabriques concrètes vont se concentrer sur une et une seule famille d'objets.
+   dans un cas où nous avons 
+
+
+   III Le singleton 
+
+  1) Rôle
+Son role est de s'assurer que tout au long de l'exécution de notre programme,une classe ne dispose que d'une et une seule instance.
+
+2) Participants
+   Une seule classe:Celle dont on ne veut qu'une seule instance durant toute l'exécution de notre programme
+
+   3)Principe
+Eviter qu'il y'ai plus d'une instance de la classe durant l'exécution du programme.
+     
+  4) Implémentation
+Pour permettre cela nous devons :
+ ->Mettre le constructeur en   'private'
+ ->définir une méthode qui crée une instance de la classe si elle n'existe pas encore sinon renvoie l'instance qui existe déjà 
+ ->Définir un attribut de classe pour stocker l'instance en cours
+
+
+ IV- Le Monteur
+
+ 1) Rôle
+Son rôle est de construire des objets complexes par assemblage des parties de plusieurs autres objets.
+
+2)participants
+
+le 
       
                                           
