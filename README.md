@@ -48,6 +48,10 @@ La communication entre 2 classes se fait par instantiation de la classe appelée
 
                                               2)Participants
       ->Le client:Qui va demander un produit et le récupérer plus tard pour l'utiliser
-      ->
+      ->La fabrique abstraite:Qui est une classe abstraite
+      ->2 fabriques concretes:Qui vont hériter de la fabrique abstraite
+      ->2 produits abstraits:Qui seront les types d'objets finaux
+      ->4 produits concrets:qui héritent des produits abstraits
+  Il faut noter que
       
                                           
