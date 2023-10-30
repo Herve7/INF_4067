@@ -1,7 +1,7 @@
 package patron_de_structuration.adapteur.cours.documents;
 
 public class ComposantPdf {
-    
+     
     public void pdfFixeContenu(){
 
         System.out.println("voici le contenu d'un document pdf");
