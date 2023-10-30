@@ -1,4 +1,4 @@
-package patron_de_structuration.adapteur.exercices;
+package patron_de_structuration.adapteur.exercices.documents;
 
 public interface Document {
 

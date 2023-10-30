@@ -1,4 +1,4 @@
-package patron_de_structuration.adapteur.cours;
+package patron_de_structuration.adapteur.cours.documents;
 
 public class ComposantPdf {
     

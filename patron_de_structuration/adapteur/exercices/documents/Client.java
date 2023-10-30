@@ -1,4 +1,4 @@
-package patron_de_structuration.adapteur.exercices;
+package patron_de_structuration.adapteur.exercices.documents;
 
 public class Client {
 
@@ -16,6 +16,13 @@ public class Client {
         pdf.dessiner();
         pdf.imprimer();
         pdf.setContenu();
+        System.out.println("\n");
+
+        ComposantWord w = new ComposantWord();
+        DocumentWord doc = new DocumentWord(w);
+        doc.dessiner();
+        doc.imprimer();
+        doc.setContenu();
         System.out.println("\n");
     }
     
