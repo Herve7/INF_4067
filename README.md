@@ -1,5 +1,6 @@
 # INF_4067
-
+                                PATRON DE CONSTRUCTION
+                                
 Lorsque nous dévellepons des applications,nous avons une interaction entre les différentes classes de ladite application.
 La communication entre 2 classes se fait par instantiation de la classe appelée dans la classe appellante a l'aide de l'opérateurn "new()".cet opérateur a une grande faiblesse car il crée un fort couplage entre les 2 classes.
   Pour résoudre ce problème,nous avons des PATRONS DE CONSTRUCTION qui permettent de rendrent la création d'objet plus facile dans notre code.Ils permettent d'abstraire la création des objets et ainsi de réduire le fort couplage qui se trouve entre nos différentes classes avec l'utilisation de l'opérateur "new()".
@@ -82,11 +83,45 @@ Pour permettre cela nous devons :
 
  IV- Le Monteur
 
- 1) Rôle
+                         1) Rôle
 Son rôle est de construire des objets complexes par assemblage des parties de plusieurs autres objets.
 
-2)participants
+                        2)participants
 
-le 
+-MonteurAbstrait : précise une classe abstraite (ou une interface)  pour la création de partie d’un objet Produit
+-MonteurConcret : construit et assemble des parties du produit par implémentation des méthodes du MonteurAbstrait
+-Directeur : construit un objet en utilisant l’interface du Monteur
+-Produit : représente l’objet complexe en cours de construction
+
+                      3)implémentation
+Le client crée l’objet Directeur en lui passant une instance du MonteurConcret
+Le Directeur utilise le Monteur chaque fois qu’une partie du produit doit être construite.
+Le Monteur gère les requêtes du Directeur et le Produit en parties
+Le client récupère le Produit auprès du Monteur
+  
       
-                                          
+
+
+
+                                          PATRON DE STRUCTURATION
+
+                              I-l'adapteur
+                      1)Role
+          Son objectif est de faire communiquer 2 classes existantes dont les interfaces sont completements differentes
+
+                      2)participants
+          -client:programme qui agit avec les classes repondants a son interface
+          -interface:introduit la signature des methodes du clients
+          -adapteur:implementes les methodes de l'interface en invoquant les methodes de l'objet adapté
+          -adapté:objet dont l'interface doit etre adapté pour correspondre a l'interface
+
+                    3)principe
+            Il permet d'ajuster du code (sans causer des bugs dans le code existant) pour répondre aux nouveaux besoins
+
+                    4)implémentation
+            -avoir 2 classes avec des interfaces incompatibles
+            -déclarer l'interface client et décrire comment les clients vont communiquer avec le service
+            -Créez la classe adaptateur et faites-la implémenter l’interface client. Laissez les méthodes vides pour le                   moment.
+            -Ajoutez un attribut à la classe adaptateur pour y mettre une référence vers l’objet service. En général on                   initialise cet attribut à l’aide du constructeur, mais il est parfois plus pratique de l’envoyer à                        l’adaptateur au moment de l’appel de ses méthodes.
+            -Implémentez toutes les méthodes de l’interface client une par une dans la classe adaptateur. L’adaptateur                    doit déléguer le gros du travail à l’objet service et ne s’occuper que de l’interface ou de la conversion                 du format des données.
+            -Les clients doivent utiliser l’adaptateur en passant par l’interface client. Vous pouvez ainsi modifier ou                   étendre les adaptateurs sans toucher au code client.
