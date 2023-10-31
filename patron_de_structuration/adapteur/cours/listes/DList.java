@@ -1,4 +1,4 @@
-package patrons_de_structuration.patron_Adapter.exemple2;
+package patron_de_structuration.adapteur.cours.listes;
 
 public class DList {
     public DNode list;
